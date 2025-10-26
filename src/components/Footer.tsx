@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Instagram, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -34,6 +35,23 @@ const Footer = () => {
             >
               <Instagram size={28} />
             </a>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base">
+            <Link 
+              to="/about" 
+              className="text-foreground hover:text-crimson transition-colors font-medium"
+            >
+              About Us
+            </Link>
+            <span className="text-border">|</span>
+            <Link 
+              to="/faq" 
+              className="text-foreground hover:text-crimson transition-colors font-medium"
+            >
+              FAQ
+            </Link>
           </div>
 
           {/* Legal Notice */}
